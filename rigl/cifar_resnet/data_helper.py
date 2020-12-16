@@ -92,7 +92,7 @@ def input_fn(params):
         split = 'test'
 
     if data_split == 'train':
-        trainfrac = int(dataset_size/50000)
+        trainfrac = int(dataset_size/50000.0)
         split = f"train[:{trainfrac}%]"
     dataset = tfds.load('cifar10:3.*.*', split=split)
 
